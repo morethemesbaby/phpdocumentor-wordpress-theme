@@ -5,9 +5,9 @@ Generate `phpDocumentor` style documentation for Wordpress themes
 ## Idea
 
 Current `phpDocumentor` templates spit documentation for APIs.
-For Wordpress it would be nice to have a documentation following the [recommended file and folder structure](https://developer.wordpress.org/themes/basics/organizing-theme-files/)
+For Wordpress it would be nice to have a documentation following the [recommended file and folder structure](https://developer.wordpress.org/themes/basics/organizing-theme-files/).
 
-This way the documentation is organized in the same familiar way as theme files in the editor. 
+A documentation organized in the same way as theme files in the editor would offer a better understanding and reading experience. 
 
 ## Compiling
 
