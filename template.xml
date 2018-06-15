@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+  <author>metamn</author>
+  <email>hello@morethemes.baby</email>
+  <version>1.0.0</version>
+  <copyright>2018 metamn</copyright>
+  <description><![CDATA[
+      This is a phpDocumentor template for Wordpress themes.
+  ]]></description>
+  <transformations>
+    <transformation writer="twig" source="templates/phpdocumentor-wordpress-theme/index.html.twig" artifact="index.html"/>
+  </transformations>
+</template>
