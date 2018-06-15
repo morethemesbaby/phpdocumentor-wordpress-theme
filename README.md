@@ -8,5 +8,5 @@ It's good to empty the cache before compiling the theme:
 
 ```
 rm -Rf /tmp/phpdoc-twig-cache/
-phpdoc --template=phpdocumentor-wordpress-theme
+phpdoc -d . -t doc -i vendor/,wpcs/ --template=phpdocumentor-wordpress-theme
 ```
