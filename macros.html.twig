@@ -1,0 +1,7 @@
+{% macro projectTitle() %}
+	{% if project.name %}
+		{{ project.name }} theme documentation
+	{% else %}
+		Theme documentation
+	{% endif %}
+{% endmacro %}

@@ -1,9 +1,11 @@
+{% import 'macros.html.twig' as macros %}
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-		<title>Wordpress theme documentation</title>
+		<title>{{ macros.projectTitle() }}</title>
 	</head>
 	<body>
 		{% include 'header.html.twig' %}
