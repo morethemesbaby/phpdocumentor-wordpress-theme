@@ -1,5 +1,49 @@
 {% extends 'parts/layout.html.twig' %}
 
 {% block content %}
-	Deprecated
+	<section class="content content-deprecated">
+		<h3 class="content-title">Deprecated elements</h3>
+
+		<div class="content-body">
+			{% set deprecatedCount = 0 %}
+			{% for element in project.indexes.elements if element.deprecated %}
+				{% set deprecatedCount = deprecatedCount + element.tags.deprecated.count %}
+				<article class="article">
+					<h3 class="article-title">
+						<span class="file-name">
+							{{ element.file.path }}
+						</span>
+						<span class="error-count">
+							{{ element.tags.deprecated.count }}
+						</span>
+					</h3>
+
+					<article class="article-body">
+						<table class="table">
+							<thead>
+                            	<tr>
+                            		<th>Type</th>
+                                	<th>Line</th>
+                                	<th>Description</th>
+                            	</tr>
+                            </thead>
+                            <tbody>
+								{% for tag in element.tags.deprecated %}
+	                                <tr>
+	                                    <td>{{ element.name }}</td>
+	                                    <td>{{ element.line }}</td>
+	                                    <td>{{ element.description }}</td>
+	                                </tr>
+								{% endfor %}
+                        	</tbody>
+						</table>
+					</article>
+				</article>
+			{% endfor %}
+
+			{% if deprecatedCount == 0 %}
+				There are no deprecated elements :)
+			{% endif %}
+		</div>
+	</section>
 {% endblock %}
