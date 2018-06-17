@@ -1,4 +1,4 @@
-{% import 'macros.html.twig' as macros %}
+{% import 'parts/macros.html.twig' as macros %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +8,9 @@
 		<title>{{ macros.projectTitle() }}</title>
 	</head>
 	<body>
-		{% include 'header.html.twig' %}
-		{% include 'menu.html.twig' %}
+		{% include 'parts/header.html.twig' %}
+		{% include 'parts/menu.html.twig' %}
+		
 		{% block content %}{% endblock %}
 	</body>
 </html>
