@@ -10,9 +10,10 @@
 		]]>
 	</description>
 	<transformations>
+		<transformation writer="twig" query="files" source="templates/phpdocumentor-wordpress-theme/file.html.twig" />
+		<transformation writer="twig" source="templates/phpdocumentor-wordpress-theme/index.html.twig" artifact="index.html"/>
 		<transformation writer="twig" source="templates/phpdocumentor-wordpress-theme/markers.html.twig" artifact="markers.html"/>
 		<transformation writer="twig" source="templates/phpdocumentor-wordpress-theme/errors.html.twig" artifact="errors.html"/>
 		<transformation writer="twig" source="templates/phpdocumentor-wordpress-theme/deprecated.html.twig" artifact="deprecated.html"/>
-		<transformation writer="twig" source="templates/phpdocumentor-wordpress-theme/index.html.twig" artifact="index.html"/>
 	</transformations>
 </template>

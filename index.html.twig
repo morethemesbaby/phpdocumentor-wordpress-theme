@@ -5,20 +5,8 @@
 		<h3 class="content-title">Documentation</h3>
 
 		<div class="content-body">
-			{% for namespace in project.namespaces %}
-				{{ namespace }}
-				<br/>
-			{% endfor %}
-
-			<br/><br/>
-			{% for element in project.indexes.elements %}
-				{{ element.file.path }}
-				<br/>
-			{% endfor %}
-
-			<br/><br/>
 			{% for file in project.files %}
-				{{ file.path }}
+				<a class="link" href="{{ file|route('url') }}" title="{{ file.path }}">{{ file.path }}</a>
 				<br/>
 			{% endfor %}
 		</div>
