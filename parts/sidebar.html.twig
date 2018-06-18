@@ -1,0 +1,13 @@
+<nav class="sidebar">
+	<h3 class="sidebar-title">Sidebar</h3>
+
+	<div class="sidebar-content">
+		<ul class="ul">
+			{% for file in project.files %}
+				<li class="li">
+					<a class="link" href="{{ file | route('url') }}" title="{{ file.path }}">{{ file.path }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</nav>
