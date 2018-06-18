@@ -1,0 +1,13 @@
+{% if function.response and function.response.types | join() != 'void' %}
+	<aside class="return">
+		<h3 class="return-title">Return</h3>
+
+		<div class="return-type">
+			{{ function.response.types |route | join('|') | raw }}
+		</div>
+
+		<div class="return-description">
+			{{ function.response.description | markdown | raw }}
+		</div>
+	</aside>
+{% endif %}

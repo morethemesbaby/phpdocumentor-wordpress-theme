@@ -1,10 +1,13 @@
-.argument {
+.argument,
+.return {
 	display: flex;
 	flex-wrap: wrap;
 }
 
 .argument-title + .argument-type,
-.argument-type + .argument-description {
+.argument-type + .argument-description,
+.return-title + .return-type,
+.return-type + .return-description {
 	margin-left: 1em;
 }
 
