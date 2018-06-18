@@ -3,7 +3,7 @@
 		{{ nodeType }}
 	</h3>
 
-	<ul class="ul">
+	<ul class="ul js-sort-list">
 		{% for file in project.files | sort %}
 			{% set displayFile = false %}
 			{% set fileName = file.path %}
