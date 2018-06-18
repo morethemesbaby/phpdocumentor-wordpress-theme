@@ -2,12 +2,13 @@
 	<h3 class="sidebar-title">Sidebar</h3>
 
 	<div class="sidebar-content">
-		<ul class="ul">
-			{% for file in project.files %}
-				<li class="li">
-					<a class="link" href="{{ file | route('url') }}" title="{{ file.path }}">{{ file.path }}</a>
-				</li>
-			{% endfor %}
-		</ul>
+		{% set nodeType = "Templates" %}
+		{% include 'inc/nodes.html.twig' %}
+
+		{% set nodeType = "Template Parts" %}
+		{% include 'inc/nodes.html.twig' %}
+
+		{% set nodeType = "Template Tags" %}
+		{% include 'inc/nodes.html.twig' %}
 	</div>
 </nav>

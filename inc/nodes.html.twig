@@ -1,0 +1,38 @@
+<aside class="nodes">
+	<h3 class="nodes-title">
+		{{ nodeType }}
+	</h3>
+
+	<ul class="ul">
+		{% for file in project.files %}
+			{% set displayFile = false %}
+
+			{% if  nodeType == "Templates" %}
+				{% set test = file.path | split('/') %}
+				{% if test[1] is empty %}
+					{% set displayFile = true %}
+				{% endif %}
+			{% endif %}
+
+			{% if  nodeType == "Template Parts" %}
+				{% set test = file.path | split('/') %}
+				{% if test[0] == 'template-parts' %}
+					{% set displayFile = true %}
+				{% endif %}
+			{% endif %}
+
+			{% if  nodeType == "Template Tags" %}
+				{% set test = file.path | split('/') %}
+				{% if test[0] == 'inc' %}
+					{% set displayFile = true %}
+				{% endif %}
+			{% endif %}
+
+			{% if displayFile == true %}
+				<li class="li">
+					<a class="link" href="{{ file | route('url') }}" title="{{ file.path }}">{{ file.path }}</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</aside>
