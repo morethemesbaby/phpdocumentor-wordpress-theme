@@ -1,0 +1,13 @@
+{% if function.arguments | length > 0 %}
+	<section class="arguments">
+		<h3 class="arguments-title">
+			Arguments
+		</h3>
+
+		<div class="arguments-body">
+			{% for argument in function.arguments %}
+				{% include 'parts/argument.html.twig' %}
+			{% endfor %}
+		</div>
+	</section>
+{% endif %}

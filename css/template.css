@@ -1,3 +1,15 @@
+.argument {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.argument-title + .argument-type,
+.argument-type + .argument-description {
+	margin-left: 1em;
+}
+
+
+
 .content-file {
 	display: flex;
 	flex-wrap: wrap;
@@ -11,6 +23,6 @@
 	width: 30%;
 }
 
-.content-file .article {
+.content-file .node {
 	width: 70%;
 }

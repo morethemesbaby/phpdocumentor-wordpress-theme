@@ -1,3 +1,19 @@
 <article class="function">
 	<h3 class="function-title">{{ function.name }}</h3>
+
+	{% if function.deprecated %}
+		<div class="function-deprecated">
+			Deprecated
+		</div>
+	{% endif %}
+
+	<div class="function-summary">
+		{{ function.summary }}
+	</div>
+
+	<div class="function-description">
+		{{ function.description | markdown | raw }}
+	</div>
+
+	{% include 'parts/arguments.html.twig' %}
 </article>
