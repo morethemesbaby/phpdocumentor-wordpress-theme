@@ -1,0 +1,6 @@
+@mixin menu--active {
+	a,
+	.link {
+		@include link($type: linethrough, $hover: underlined);
+	}
+}

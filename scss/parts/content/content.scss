@@ -1,4 +1,6 @@
 @mixin content {
+	@include padding;
+	
 	.content-title {
 		display: none;
 	}

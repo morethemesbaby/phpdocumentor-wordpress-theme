@@ -8,7 +8,7 @@
 		<title>{{ macros.projectTitle() }}</title>
 		<link href="{{ path('css/template.css') }}" rel="stylesheet" media="all"/>
 	</head>
-	<body>
+	<body class="{{ bodyClass }}">
 		{% include 'parts/header.html.twig' %}
 		{% include 'parts/menu.html.twig' %}
 

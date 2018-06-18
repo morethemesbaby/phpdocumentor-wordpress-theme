@@ -1,4 +1,6 @@
 @mixin header {
+	@include padding;
+	
 	.header-title {
 		@include text-style(headline);
 	}

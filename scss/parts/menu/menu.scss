@@ -1,4 +1,6 @@
 @mixin menu {
+	@include padding(no, yes, no, yes);
+	
 	.menu-title {
 		display: none;
 	}

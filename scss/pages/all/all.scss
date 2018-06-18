@@ -34,5 +34,7 @@ html {
 	.sidebar {
 		@include sidebar;
 	}
+
+	@include all--menu-active;
   }
 }

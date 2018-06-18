@@ -1,0 +1,49 @@
+@mixin all--menu-active {
+	&.index {
+		.menu {
+			.ul {
+				.li {
+					&--index {
+						@include menu--active;
+					}
+				}
+			}
+		}
+	}
+
+	&.errors {
+		.menu {
+			.ul {
+				.li {
+					&--errors {
+						@include menu--active;
+					}
+				}
+			}
+		}
+	}
+
+	&.markers {
+		.menu {
+			.ul {
+				.li {
+					&--markers {
+						@include menu--active;
+					}
+				}
+			}
+		}
+	}
+
+	&.deprecated {
+		.menu {
+			.ul {
+				.li {
+					&--deprecated {
+						@include menu--active;
+					}
+				}
+			}
+		}
+	}
+}

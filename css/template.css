@@ -586,8 +586,44 @@ html {
       html body .link:hover,
       html body .link:active {
         text-decoration: line-through; }
+    @media only screen and (max-width: 767.9px) {
+      html body .header {
+        padding-top: 2.5em; } }
+    @media only screen and (min-width: 768px) {
+      html body .header {
+        padding-top: 2.5em; } }
+    @media only screen and (max-width: 767.9px) {
+      html body .header {
+        padding-bottom: 2.5em; } }
+    @media only screen and (min-width: 768px) {
+      html body .header {
+        padding-bottom: 2.5em; } }
+    @media only screen and (max-width: 767.9px) {
+      html body .header {
+        padding-left: 1.25em; } }
+    @media only screen and (min-width: 768px) {
+      html body .header {
+        padding-left: 2.5em; } }
+    @media only screen and (max-width: 767.9px) {
+      html body .header {
+        padding-right: 1.25em; } }
+    @media only screen and (min-width: 768px) {
+      html body .header {
+        padding-right: 2.5em; } }
     html body .header .header-title {
       font-size: 1.953em; }
+    @media only screen and (max-width: 767.9px) {
+      html body .menu {
+        padding-left: 1.25em; } }
+    @media only screen and (min-width: 768px) {
+      html body .menu {
+        padding-left: 2.5em; } }
+    @media only screen and (max-width: 767.9px) {
+      html body .menu {
+        padding-right: 1.25em; } }
+    @media only screen and (min-width: 768px) {
+      html body .menu {
+        padding-right: 2.5em; } }
     html body .menu .menu-title {
       display: none; }
     html body .menu .ul {
@@ -600,11 +636,81 @@ html {
       html body .menu .ul .li + .li,
       html body .menu .ul .li + li {
         margin-left: 1.25em; }
+    @media only screen and (max-width: 767.9px) {
+      html body .content {
+        padding-top: 2.5em; } }
+    @media only screen and (min-width: 768px) {
+      html body .content {
+        padding-top: 2.5em; } }
+    @media only screen and (max-width: 767.9px) {
+      html body .content {
+        padding-bottom: 2.5em; } }
+    @media only screen and (min-width: 768px) {
+      html body .content {
+        padding-bottom: 2.5em; } }
+    @media only screen and (max-width: 767.9px) {
+      html body .content {
+        padding-left: 1.25em; } }
+    @media only screen and (min-width: 768px) {
+      html body .content {
+        padding-left: 2.5em; } }
+    @media only screen and (max-width: 767.9px) {
+      html body .content {
+        padding-right: 1.25em; } }
+    @media only screen and (min-width: 768px) {
+      html body .content {
+        padding-right: 2.5em; } }
     html body .content .content-title {
       display: none; }
     html body .sidebar .sidebar-title {
       display: none; }
     html body .sidebar .sidebar-content .ul {
       list-style: none; }
+    html body.index .menu .ul .li--index a,
+    html body.index .menu .ul .li--index .link {
+      color: black;
+      background-color: white;
+      text-decoration: line-through;
+      will-change: text-decoration;
+      transition: text-decoration 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946); }
+      html body.index .menu .ul .li--index a:hover, html body.index .menu .ul .li--index a:active,
+      html body.index .menu .ul .li--index .link:hover,
+      html body.index .menu .ul .li--index .link:active {
+        text-decoration: underline; }
+    html body.errors .menu .ul .li--errors {
+      background: red; }
+      html body.errors .menu .ul .li--errors a,
+      html body.errors .menu .ul .li--errors .link {
+        color: black;
+        background-color: white;
+        text-decoration: line-through;
+        will-change: text-decoration;
+        transition: text-decoration 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946); }
+        html body.errors .menu .ul .li--errors a:hover, html body.errors .menu .ul .li--errors a:active,
+        html body.errors .menu .ul .li--errors .link:hover,
+        html body.errors .menu .ul .li--errors .link:active {
+          text-decoration: underline; }
+    html body.markers .menu .ul .li--markers a,
+    html body.markers .menu .ul .li--markers .link {
+      color: black;
+      background-color: white;
+      text-decoration: line-through;
+      will-change: text-decoration;
+      transition: text-decoration 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946); }
+      html body.markers .menu .ul .li--markers a:hover, html body.markers .menu .ul .li--markers a:active,
+      html body.markers .menu .ul .li--markers .link:hover,
+      html body.markers .menu .ul .li--markers .link:active {
+        text-decoration: underline; }
+    html body.deprecated .menu .ul .li--deprecated a,
+    html body.deprecated .menu .ul .li--deprecated .link {
+      color: black;
+      background-color: white;
+      text-decoration: line-through;
+      will-change: text-decoration;
+      transition: text-decoration 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946); }
+      html body.deprecated .menu .ul .li--deprecated a:hover, html body.deprecated .menu .ul .li--deprecated a:active,
+      html body.deprecated .menu .ul .li--deprecated .link:hover,
+      html body.deprecated .menu .ul .li--deprecated .link:active {
+        text-decoration: underline; }
 
 /*# sourceMappingURL=template.css.map */
