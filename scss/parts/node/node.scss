@@ -1,4 +1,48 @@
 @mixin node {
-	@include padding;
-	@include border(normal, all);
+	display: flex;
+	flex-direction: column;
+
+	.node-subtitle {
+		order: -1;
+		display: inline-flex;
+
+		.text {
+			@include text-style(section-title-bordered);
+			padding: $button-padding !important;
+		}
+	}
+
+	.node-title {
+		@include border(normal, all);
+		@include padding(half, half, half, half);
+
+		.text {
+			@include text-style(headline);
+		}
+	}
+
+	.node-summary-and-description {
+		@include border(normal, all);
+		@include padding(half, half, half, half);
+
+		border-top: none;
+		display: flex;
+		flex-direction: column;
+
+		.node-summary {
+			.text {
+				@include text-style(large);
+			}
+
+			+ .node-description {
+				@include margin(half, no, no, no);
+			}
+		}
+
+		.node-description {
+			.text {
+				@include text-style(body-text-post);
+			}
+		}
+	}
 }

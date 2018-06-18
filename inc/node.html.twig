@@ -1,16 +1,34 @@
 <section class="node">
 	<h3 class="node-title">
-		{{ node.name }}
+		<span class="text">{{ node.name }}</span>
 	</h3>
-	<p class="node-subtitle">
-		{{ node.path | split('/') | slice(0,-1) | join('/') }}
-	</p>
-	<div class="node-summary">
-		{{ node.summary }}
-	</div>
-	<div class="node-description">
-		{{ node.description | markdown | raw }}
-	</div>
+
+	{% set path = node.path | split('/') | slice(0,-1) | join('/') %}
+
+	{% if path | length > 0 %}
+		<div class="node-subtitle">
+			<span class="text">{{ path }}</span>
+		</div>
+	{% endif %}
+
+	{% set summary = node.summary %}
+	{% set description = node.description %}
+
+	{% if summary | length > 0 or description | length > 0 %}
+		<div class="node-summary-and-description">
+			{% if summary | length > 0 %}
+				<div class="node-summary">
+					<span class="text">{{ summary }}</span>
+				</div>
+			{% endif %}
+
+			{% if description | length > 0 %}
+				<div class="node-description">
+					<span class="text">{{ description | markdown | raw }}</span>
+				</div>
+			{% endif %}
+		</div>
+	{% endif %}
 
 	{% include 'inc/functions.html.twig' %}
 </section>
