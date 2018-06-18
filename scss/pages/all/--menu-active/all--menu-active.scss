@@ -1,11 +1,9 @@
 @mixin all--menu-active {
-	&.index {
-		.menu {
-			.ul {
-				.li {
-					&--index {
-						@include menu--active;
-					}
+	.menu {
+		.ul {
+			.li {
+				&--index {
+					@include menu--active;
 				}
 			}
 		}
@@ -15,6 +13,10 @@
 		.menu {
 			.ul {
 				.li {
+					&--index {
+						@include menu--inactive;
+					}
+
 					&--errors {
 						@include menu--active;
 					}
@@ -27,6 +29,10 @@
 		.menu {
 			.ul {
 				.li {
+					&--index {
+						@include menu--inactive;
+					}
+
 					&--markers {
 						@include menu--active;
 					}
@@ -39,6 +45,10 @@
 		.menu {
 			.ul {
 				.li {
+					&--index {
+						@include menu--inactive;
+					}
+					
 					&--deprecated {
 						@include menu--active;
 					}

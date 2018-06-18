@@ -662,34 +662,184 @@ html {
         padding-right: 2.5em; } }
     html body .content .content-title {
       display: none; }
+    html body .content .node {
+      border: 1px solid; }
+      @media only screen and (max-width: 767.9px) {
+        html body .content .node {
+          padding-top: 2.5em; } }
+      @media only screen and (min-width: 768px) {
+        html body .content .node {
+          padding-top: 2.5em; } }
+      @media only screen and (max-width: 767.9px) {
+        html body .content .node {
+          padding-bottom: 2.5em; } }
+      @media only screen and (min-width: 768px) {
+        html body .content .node {
+          padding-bottom: 2.5em; } }
+      @media only screen and (max-width: 767.9px) {
+        html body .content .node {
+          padding-left: 1.25em; } }
+      @media only screen and (min-width: 768px) {
+        html body .content .node {
+          padding-left: 2.5em; } }
+      @media only screen and (max-width: 767.9px) {
+        html body .content .node {
+          padding-right: 1.25em; } }
+      @media only screen and (min-width: 768px) {
+        html body .content .node {
+          padding-right: 2.5em; } }
+      @media only screen and (max-width: 767.9px) {
+        html body .content .node + .sidebar {
+          margin-top: 2.5em; } }
+      @media only screen and (min-width: 768px) {
+        html body .content .node + .sidebar {
+          margin-top: 2.5em; } }
+      @media only screen and (max-width: 767.9px) {
+        html body .content .node + .sidebar {
+          margin-bottom: 0; } }
+      @media only screen and (min-width: 768px) {
+        html body .content .node + .sidebar {
+          margin-bottom: 0; } }
+      @media only screen and (max-width: 767.9px) {
+        html body .content .node + .sidebar {
+          margin-left: 0; } }
+      @media only screen and (min-width: 768px) {
+        html body .content .node + .sidebar {
+          margin-left: 0; } }
+      @media only screen and (max-width: 767.9px) {
+        html body .content .node + .sidebar {
+          margin-right: 0; } }
+      @media only screen and (min-width: 768px) {
+        html body .content .node + .sidebar {
+          margin-right: 0; } }
     html body .sidebar .sidebar-title {
       display: none; }
-    html body .sidebar .sidebar-content .ul {
-      list-style: none; }
-    html body.index .menu .ul .li--index a,
-    html body.index .menu .ul .li--index .link {
+    html body .sidebar .sidebar-content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      @media only screen and (max-width: 767.9px) {
+        html body .sidebar .sidebar-content {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row; }
+          html body .sidebar .sidebar-content > * {
+            margin-right: 0px;
+            margin-bottom: 0px;
+            box-sizing: border-box; }
+          html body .sidebar .sidebar-content > * {
+            width: calc(100% - (((1 - 1) * 0px) / 1) - 0px); }
+            html body .sidebar .sidebar-content > *:nth-child(1n) {
+              margin-right: 0; } }
+      @media only screen and (min-width: 768px) {
+        html body .sidebar .sidebar-content {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row; }
+          html body .sidebar .sidebar-content > * {
+            margin-right: 1.25em;
+            margin-bottom: 0px;
+            box-sizing: border-box; }
+          html body .sidebar .sidebar-content > * {
+            width: calc(33.33333% - (((3 - 1) * 1.25em) / 3) - 0px); }
+            html body .sidebar .sidebar-content > *:nth-child(3n) {
+              margin-right: 0; } }
+      html body .sidebar .sidebar-content .nodes .nodes-title {
+        font-size: 1.25em; }
+        @media only screen and (max-width: 767.9px) {
+          html body .sidebar .sidebar-content .nodes .nodes-title {
+            margin-bottom: 1.25em; } }
+        @media only screen and (min-width: 768px) {
+          html body .sidebar .sidebar-content .nodes .nodes-title {
+            margin-bottom: 1.25em; } }
+        @media only screen and (max-width: 767.9px) {
+          html body .sidebar .sidebar-content .nodes .nodes-title {
+            margin-top: 0; } }
+        @media only screen and (min-width: 768px) {
+          html body .sidebar .sidebar-content .nodes .nodes-title {
+            margin-top: 0; } }
+        @media only screen and (max-width: 767.9px) {
+          html body .sidebar .sidebar-content .nodes .nodes-title {
+            margin-left: 0; } }
+        @media only screen and (min-width: 768px) {
+          html body .sidebar .sidebar-content .nodes .nodes-title {
+            margin-left: 0; } }
+        @media only screen and (max-width: 767.9px) {
+          html body .sidebar .sidebar-content .nodes .nodes-title {
+            margin-right: 0; } }
+        @media only screen and (min-width: 768px) {
+          html body .sidebar .sidebar-content .nodes .nodes-title {
+            margin-right: 0; } }
+      html body .sidebar .sidebar-content .nodes .ul {
+        list-style: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        html body .sidebar .sidebar-content .nodes .ul li,
+        html body .sidebar .sidebar-content .nodes .ul .li {
+          border: 1px solid;
+          margin-bottom: 0.625em;
+          padding: 0.625em; }
+    html body .menu .ul .li--index a,
+    html body .menu .ul .li--index .link {
       color: black;
       background-color: white;
       text-decoration: line-through;
       will-change: text-decoration;
       transition: text-decoration 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946); }
-      html body.index .menu .ul .li--index a:hover, html body.index .menu .ul .li--index a:active,
-      html body.index .menu .ul .li--index .link:hover,
-      html body.index .menu .ul .li--index .link:active {
+      html body .menu .ul .li--index a:hover, html body .menu .ul .li--index a:active,
+      html body .menu .ul .li--index .link:hover,
+      html body .menu .ul .li--index .link:active {
         text-decoration: underline; }
-    html body.errors .menu .ul .li--errors {
-      background: red; }
-      html body.errors .menu .ul .li--errors a,
-      html body.errors .menu .ul .li--errors .link {
-        color: black;
-        background-color: white;
-        text-decoration: line-through;
-        will-change: text-decoration;
-        transition: text-decoration 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946); }
-        html body.errors .menu .ul .li--errors a:hover, html body.errors .menu .ul .li--errors a:active,
-        html body.errors .menu .ul .li--errors .link:hover,
-        html body.errors .menu .ul .li--errors .link:active {
-          text-decoration: underline; }
+    html body.errors .menu .ul .li--index a,
+    html body.errors .menu .ul .li--index .link {
+      color: black;
+      background-color: white;
+      text-decoration: underline;
+      will-change: text-decoration;
+      transition: text-decoration 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946); }
+      html body.errors .menu .ul .li--index a:hover, html body.errors .menu .ul .li--index a:active,
+      html body.errors .menu .ul .li--index .link:hover,
+      html body.errors .menu .ul .li--index .link:active {
+        text-decoration: line-through; }
+    html body.errors .menu .ul .li--errors a,
+    html body.errors .menu .ul .li--errors .link {
+      color: black;
+      background-color: white;
+      text-decoration: line-through;
+      will-change: text-decoration;
+      transition: text-decoration 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946); }
+      html body.errors .menu .ul .li--errors a:hover, html body.errors .menu .ul .li--errors a:active,
+      html body.errors .menu .ul .li--errors .link:hover,
+      html body.errors .menu .ul .li--errors .link:active {
+        text-decoration: underline; }
+    html body.markers .menu .ul .li--index a,
+    html body.markers .menu .ul .li--index .link {
+      color: black;
+      background-color: white;
+      text-decoration: underline;
+      will-change: text-decoration;
+      transition: text-decoration 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946); }
+      html body.markers .menu .ul .li--index a:hover, html body.markers .menu .ul .li--index a:active,
+      html body.markers .menu .ul .li--index .link:hover,
+      html body.markers .menu .ul .li--index .link:active {
+        text-decoration: line-through; }
     html body.markers .menu .ul .li--markers a,
     html body.markers .menu .ul .li--markers .link {
       color: black;
@@ -701,6 +851,17 @@ html {
       html body.markers .menu .ul .li--markers .link:hover,
       html body.markers .menu .ul .li--markers .link:active {
         text-decoration: underline; }
+    html body.deprecated .menu .ul .li--index a,
+    html body.deprecated .menu .ul .li--index .link {
+      color: black;
+      background-color: white;
+      text-decoration: underline;
+      will-change: text-decoration;
+      transition: text-decoration 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946); }
+      html body.deprecated .menu .ul .li--index a:hover, html body.deprecated .menu .ul .li--index a:active,
+      html body.deprecated .menu .ul .li--index .link:hover,
+      html body.deprecated .menu .ul .li--index .link:active {
+        text-decoration: line-through; }
     html body.deprecated .menu .ul .li--deprecated a,
     html body.deprecated .menu .ul .li--deprecated .link {
       color: black;

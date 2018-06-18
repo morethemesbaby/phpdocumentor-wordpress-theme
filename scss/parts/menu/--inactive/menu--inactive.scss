@@ -1,0 +1,6 @@
+@mixin menu--inactive {
+	a,
+	.link {
+		@include link;
+	}
+}

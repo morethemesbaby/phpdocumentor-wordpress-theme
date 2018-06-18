@@ -4,8 +4,27 @@
 	}
 
 	.sidebar-content {
-		.ul {
-			@include ul;
+		display: flex;
+
+		@include mobile {
+			@include flexbox-grid(1, 0px, 0px, $grid-title: false);
+		}
+
+		@include mobile-and-up {
+			@include flexbox-grid(3, $lem, 0px, $grid-title: false);
+		}
+
+		.nodes {
+			.nodes-title {
+				@include margin(no, no, half, no);
+				@include text-style(large);
+			}
+
+			.ul {
+				@include ul;
+				@include ul--vertical;
+				@include ul--bordered;
+			}
 		}
 	}
 }

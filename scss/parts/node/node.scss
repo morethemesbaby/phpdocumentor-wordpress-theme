@@ -1,0 +1,4 @@
+@mixin node {
+	@include padding;
+	@include border(normal, all);
+}

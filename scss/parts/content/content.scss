@@ -1,7 +1,15 @@
 @mixin content {
 	@include padding;
-	
+
 	.content-title {
 		display: none;
+	}
+
+	.node {
+		@include node;
+
+		+ .sidebar {
+			@include margin(yes, no, no, no);
+		}
 	}
 }
