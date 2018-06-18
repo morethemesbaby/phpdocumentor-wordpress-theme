@@ -17,7 +17,11 @@ If you add the `--title="Project Title"` param it will be used as the site title
 
 ### SCSS
 
+```
+gulp
+```
 
+Because `scss/template.scss` contains css globbing declarations like `@import 'framework/design/**/*.scss';` and cannot be compiled simply by the `scss` command. 
 
 ### Twig
 

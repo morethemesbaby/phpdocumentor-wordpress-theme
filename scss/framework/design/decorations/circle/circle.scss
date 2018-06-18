@@ -1,0 +1,18 @@
+// Circle
+//
+// Draw a circle with a radius and fill with a color
+//
+// 
+@mixin circle($radius: $lem * 3, $color-scheme: inverted) {
+  width: $radius;
+  height: $radius;
+  border-radius: $radius;
+
+  @include colors($color-scheme);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
