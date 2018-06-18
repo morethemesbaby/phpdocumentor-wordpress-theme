@@ -1,0 +1,16 @@
+.content-file {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.content-file .content-title {
+	display: none;
+}
+
+.content-file .sidebar {
+	width: 30%;
+}
+
+.content-file .article {
+	width: 70%;
+}

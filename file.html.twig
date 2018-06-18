@@ -1,13 +1,17 @@
 {% extends 'parts/layout.html.twig' %}
 
-{% block sidebar %}
-	{% include 'parts/sidebar.html.twig' %}
-{% endblock %}
 
 {% block content %}
-	<p>{{ node.path | split('/') | slice(0,-1) | join('/') }}</p>
-	<p>{{ node.name }}</p>
-	<p>{{ node.summary }}</p>
-	<p>{{ node.description | markdown | raw }}</p>
+	<section class="content content-file">
+		<h3 class="content-title">Content</h3>
 
+		{% include 'parts/sidebar.html.twig' %}
+
+		<article class="article">
+			<p>{{ node.path | split('/') | slice(0,-1) | join('/') }}</p>
+			<p>{{ node.name }}</p>
+			<p>{{ node.summary }}</p>
+			<p>{{ node.description | markdown | raw }}</p>
+		</article>
+	</section>
 {% endblock %}

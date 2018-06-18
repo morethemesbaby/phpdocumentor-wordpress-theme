@@ -1,19 +1,9 @@
 {% extends 'parts/layout.html.twig' %}
 
-{% block sidebar %}
-	{% include 'parts/sidebar.html.twig' %}
-{% endblock %}
-
-
 {% block content %}
 	<section class="content content-documentation">
 		<h3 class="content-title">Documentation</h3>
 
-		<div class="content-body">
-			{% for file in project.files %}
-				<a class="link" href="{{ file|route('url') }}" title="{{ file.path }}">{{ file.path }}</a>
-				<br/>
-			{% endfor %}
-		</div>
+		{% include 'parts/sidebar.html.twig' %}
 	</section>
 {% endblock %}

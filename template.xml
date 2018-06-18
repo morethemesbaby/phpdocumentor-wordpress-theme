@@ -10,6 +10,7 @@
 		]]>
 	</description>
 	<transformations>
+		<transformation query="copy" writer="FileIo" source="templates/phpdocumentor-wordpress-theme/css" artifact="css"/>
 		<transformation writer="twig" query="files" source="templates/phpdocumentor-wordpress-theme/file.html.twig" />
 		<transformation writer="twig" source="templates/phpdocumentor-wordpress-theme/index.html.twig" artifact="index.html"/>
 		<transformation writer="twig" source="templates/phpdocumentor-wordpress-theme/markers.html.twig" artifact="markers.html"/>
