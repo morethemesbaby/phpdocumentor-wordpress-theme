@@ -1,5 +1,5 @@
 {% macro projectTitle() %}
-	{% if project.name %}
+	{% if project.name != 'API Documentation' %}
 		{{ project.name }} theme documentation
 	{% else %}
 		Theme documentation
