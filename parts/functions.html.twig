@@ -1,0 +1,13 @@
+{% if node.functions | length > 0 %}
+	<section class="node-functions">
+		<h3 class="node-functions-title">
+			Functions
+		</h3>
+
+		<div class="node-functions-body">
+			{% for function in node.functions %}
+				{% include 'parts/function.html.twig' %}
+			{% endfor %}
+		</div>
+	</section>
+{% endif %}

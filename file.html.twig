@@ -7,11 +7,21 @@
 
 		{% include 'parts/sidebar.html.twig' %}
 
-		<article class="article">
-			<p>{{ node.path | split('/') | slice(0,-1) | join('/') }}</p>
-			<p>{{ node.name }}</p>
-			<p>{{ node.summary }}</p>
-			<p>{{ node.description | markdown | raw }}</p>
-		</article>
+		<section class="node">
+			<h3 class="node-title">
+				{{ node.name }}
+			</h3>
+			<p class="node-subtitle">
+				{{ node.path | split('/') | slice(0,-1) | join('/') }}
+			</p>
+			<div class="node-summary">
+				{{ node.summary }}
+			</div>
+			<div class="node-description">
+				{{ node.description | markdown | raw }}
+			</div>
+
+			{% include 'parts/functions.html.twig' %}
+		</section>
 	</section>
 {% endblock %}
