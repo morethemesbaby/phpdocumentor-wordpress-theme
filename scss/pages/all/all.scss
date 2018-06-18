@@ -1,0 +1,38 @@
+// Common settings for all pages
+//
+// This is where we set up all basic styles and parts of the site
+//
+//
+@include html-css-reset;
+
+html {
+  @include grid-reset;
+
+  body {
+    @include typography-reset;
+    @include form-reset;
+    @include form;
+    @include text-style(default);
+
+	a,
+	.link {
+		@include link;
+	}
+
+	.header {
+		@include header;
+	}
+
+	.menu {
+		@include menu;
+	}
+
+	.content {
+		@include content;
+	}
+
+	.sidebar {
+		@include sidebar;
+	}
+  }
+}

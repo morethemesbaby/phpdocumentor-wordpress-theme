@@ -1,0 +1,10 @@
+@mixin menu {
+	.menu-title {
+		display: none;
+	}
+
+	.ul {
+		@include ul;
+		@include ul--inline;
+	}
+}

@@ -1,0 +1,11 @@
+@mixin sidebar {
+	.sidebar-title {
+		display: none;
+	}
+
+	.sidebar-content {
+		.ul {
+			@include ul;
+		}
+	}
+}
