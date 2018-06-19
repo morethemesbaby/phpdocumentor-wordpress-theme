@@ -1,0 +1,44 @@
+<article class="article">
+	<h3 class="article-title">
+		<span class="file-name">
+			{{ file.path }}
+		</span>
+		<span class="error-count">
+			{{ file.allerrors | length }}
+		</span>
+	</h3>
+
+	<div class="article-body">
+		<div class="article-body-header">
+			<div class="col-1">
+				<span class="text">Type</span>
+			</div>
+
+			<div class="col-2">
+				<span class="text">Line</span>
+			</div>
+
+			<div class="col-3">
+				<span class="text">Description</span>
+			</div>
+		</div>
+
+		<div class="article-body-items">
+			{% for error in file.allerrors %}
+				<div class="article-body-item">
+					<div class="col-1">
+						<span class="text">{{ error.severity }}</span>
+					</div>
+
+					<div class="col-2">
+						<span class="text">{{ error.line }}</span>
+					</div>
+
+					<div class="col-3">
+						<span class="text">{{ error.code | trans(error.context) }}</span>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</article>

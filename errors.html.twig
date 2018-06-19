@@ -10,37 +10,7 @@
 			{% for file in project.files %}
 				{% if file.allerrors | length > 0 %}
 					{% set errorCount = errorCount + file.allerrors | length %}
-					<article class="article">
-						<h3 class="article-title">
-							<span class="file-name">
-								{{ file.path }}
-							</span>
-							<span class="error-count">
-								{{ file.allerrors | length }}
-							</span>
-						</h3>
-
-						<article class="article-body">
-							<table class="table">
-								<thead>
-                                	<tr>
-                                		<th>Type</th>
-                                    	<th>Line</th>
-                                    	<th>Description</th>
-                                	</tr>
-                                </thead>
-                                <tbody>
-                                	{% for error in file.allerrors %}
-                                    	<tr class="{{ error.severity }}">
-                                        	<td>{{ error.severity }}</td>
-                                        	<td>{{ error.line }}</td>
-                                        	<td>{{ error.code|trans(error.context) }}</td>
-                                    	</tr>
-                                	{% endfor %}
-                            	</tbody>
-							</table>
-						</article>
-					</article>
+					{% include 'parts/error.html.twig' %}
 				{% endif %}
 			{% endfor %}
 
