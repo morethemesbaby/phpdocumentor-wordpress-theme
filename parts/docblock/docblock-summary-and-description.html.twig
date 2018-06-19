@@ -1,0 +1,8 @@
+{% if docBlock.node.summary | length > 0 or docBlock.node.description | length > 0 %}
+
+<div class="{{ docBlock.klass }}-summary-and-description">
+	{% include 'parts/docblock/docblock-summary.html.twig' %}
+	{% include 'parts/docblock/docblock-description.html.twig' %}
+</div>
+
+{% endif %}

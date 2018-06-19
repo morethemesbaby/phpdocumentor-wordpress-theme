@@ -1,0 +1,9 @@
+{% if docBlock.node.summary | length > 0%}
+
+<div class="{{ docBlock.klass }}-summary">
+	<span class="text">
+		{{ docBlock.node.summary }}
+	</span>
+</div>
+
+{% endif %}

@@ -1,0 +1,11 @@
+{% set docBlockPath = docBlock.node.path | split('/') | slice(0,-1) | join('/') %}
+
+{% if docBlockPath | length > 0%}
+
+<h3 class="{{ docBlock.klass }}-path">
+	<span class="text">
+		{{ docBlockPath }}
+	</span>
+</h3>
+
+{% endif %}
