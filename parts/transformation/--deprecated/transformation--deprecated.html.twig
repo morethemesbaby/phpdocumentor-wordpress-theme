@@ -7,7 +7,7 @@
 		{% set tagListTags %}
 		{% for tag in element.tags.deprecated %}
 			{% set tag = { klass: 'tag', items: [element.name, element.line, element.description] } %}
-			{% include 'parts/docblock/docblock-tag.html.twig' %}
+			{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
 		{% endfor %}
 		{% endset %}
 

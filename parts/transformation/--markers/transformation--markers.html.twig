@@ -7,7 +7,7 @@
 		{% set tagListTags %}
 		{% for marker in file.markers %}
 			{% set tag = { klass: 'tag', items: [marker.type, marker.line, marker.message] } %}
-			{% include 'parts/docblock/docblock-tag.html.twig' %}
+			{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
 		{% endfor %}
 		{% endset %}
 

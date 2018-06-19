@@ -7,7 +7,7 @@
 		{% set tagListTags %}
 		{% for error in file.allerrors %}
 			{% set tag = { klass: 'tag', items: [error.severity, error.line, error.code | trans(error.context)] } %}
-			{% include 'parts/docblock/docblock-tag.html.twig' %}
+			{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
 		{% endfor %}
 		{% endset %}
 

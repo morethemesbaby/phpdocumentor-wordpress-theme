@@ -13,7 +13,7 @@
 
 	{% if tagList.tags | length > 0 %}
 		{% set tag = tagList.tags %}
-		{% include 'parts/docblock/docblock-tag.html.twig' %}
+		{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
 	{% endif %}
 
 	{% if tagList.tagsHTML | length > 0 %}
