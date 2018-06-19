@@ -7,11 +7,11 @@
 		display: flex;
 
 		@include mobile {
-			@include flexbox-grid(1, 0px, 0px, $grid-title: false);
+			@include flexbox-grid(1, 0px, $lem, $grid-title: false);
 		}
 
 		@include mobile-and-up {
-			@include flexbox-grid(3, $lem, 0px, $grid-title: false);
+			@include flexbox-grid(3, $lem, $lem, $grid-title: false);
 		}
 
 		.nodes {

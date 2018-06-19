@@ -1618,7 +1618,7 @@ html {
                   flex-direction: row; }
           html body .sidebar .sidebar-content > * {
             margin-right: 0px;
-            margin-bottom: 0px;
+            margin-bottom: 1.25em;
             box-sizing: border-box; }
           html body .sidebar .sidebar-content > * {
             width: calc(100% - (((1 - 1) * 0px) / 1) - 0px); }
@@ -1637,7 +1637,7 @@ html {
                   flex-direction: row; }
           html body .sidebar .sidebar-content > * {
             margin-right: 1.25em;
-            margin-bottom: 0px;
+            margin-bottom: 1.25em;
             box-sizing: border-box; }
           html body .sidebar .sidebar-content > * {
             width: calc(33.33333% - (((3 - 1) * 1.25em) / 3) - 0px); }
