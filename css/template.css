@@ -1637,6 +1637,62 @@ html {
             padding-right: 2.5em; } }
         html body .content .node .functions .functions-body .function .function-title .text {
           font-size: 1.563em; }
+        html body .content .node .functions .functions-body .function .function-summary .text {
+          font-size: 1.25em; }
+        @media only screen and (max-width: 767.9px) {
+          html body .content .node .functions .functions-body .function .arguments {
+            margin-top: 1.25em; } }
+        @media only screen and (min-width: 768px) {
+          html body .content .node .functions .functions-body .function .arguments {
+            margin-top: 1.25em; } }
+        @media only screen and (max-width: 767.9px) {
+          html body .content .node .functions .functions-body .function .arguments {
+            margin-bottom: 0; } }
+        @media only screen and (min-width: 768px) {
+          html body .content .node .functions .functions-body .function .arguments {
+            margin-bottom: 0; } }
+        @media only screen and (max-width: 767.9px) {
+          html body .content .node .functions .functions-body .function .arguments {
+            margin-left: 0; } }
+        @media only screen and (min-width: 768px) {
+          html body .content .node .functions .functions-body .function .arguments {
+            margin-left: 0; } }
+        @media only screen and (max-width: 767.9px) {
+          html body .content .node .functions .functions-body .function .arguments {
+            margin-right: 0; } }
+        @media only screen and (min-width: 768px) {
+          html body .content .node .functions .functions-body .function .arguments {
+            margin-right: 0; } }
+        html body .content .node .functions .functions-body .function .arguments .arguments-title .text {
+          font-weight: bold; }
+        html body .content .node .functions .functions-body .function .arguments .arguments-body .argument {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          border: 1px solid;
+          margin: 0.3125em 0;
+          padding: 0.3125em; }
+          html body .content .node .functions .functions-body .function .arguments .arguments-body .argument .argument-title {
+            width: 35%; }
+          html body .content .node .functions .functions-body .function .arguments .arguments-body .argument .argument-type {
+            width: 15%; }
+          html body .content .node .functions .functions-body .function .arguments .arguments-body .argument .argument-description {
+            width: 50%; }
+        html body .content .node .functions .functions-body .function .return {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          border: 1px solid;
+          margin: 0.3125em 0;
+          padding: 0.3125em; }
+          html body .content .node .functions .functions-body .function .return .return-title {
+            width: 35%; }
+            html body .content .node .functions .functions-body .function .return .return-title .text {
+              font-weight: bold; }
+          html body .content .node .functions .functions-body .function .return .return-type {
+            width: 15%; }
+          html body .content .node .functions .functions-body .function .return .return-description {
+            width: 50%; }
         @media only screen and (max-width: 767.9px) {
           html body .content .node .functions .functions-body .function + .function {
             margin-top: 2.5em; } }
@@ -1661,6 +1717,12 @@ html {
         @media only screen and (min-width: 768px) {
           html body .content .node .functions .functions-body .function + .function {
             margin-right: 0; } }
+        @media only screen and (max-width: 767.9px) {
+          html body .content .node .functions .functions-body .function + .function {
+            padding-top: 2.5em; } }
+        @media only screen and (min-width: 768px) {
+          html body .content .node .functions .functions-body .function + .function {
+            padding-top: 2.5em; } }
       @media only screen and (max-width: 767.9px) {
         html body .content .node + .sidebar {
           margin-top: 2.5em; } }

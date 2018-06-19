@@ -20,6 +20,7 @@
 
 			+ .function {
 				@include margin(yes, no, no, no);
+				@include padding(yes, no, no, no);
 			}
 		}
 	}

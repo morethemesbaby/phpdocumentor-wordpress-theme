@@ -1,0 +1,13 @@
+@mixin arguments {
+	.arguments-title {
+		.text {
+			font-weight: bold;
+		}
+	}
+
+	.arguments-body {
+		.argument {
+			@include argument;
+		}
+	}
+}

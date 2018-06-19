@@ -4,4 +4,19 @@
 			@include text-style(function-title);
 		}
 	}
+
+	.function-summary {
+		.text {
+			@include text-style(large);
+		}
+	}
+
+	.arguments {
+		@include margin(half, no, no, no);
+		@include arguments;
+	}
+
+	.return {
+		@include return;
+	}
 }

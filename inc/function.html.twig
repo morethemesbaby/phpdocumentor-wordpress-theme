@@ -5,17 +5,21 @@
 
 	{% if function.deprecated %}
 		<div class="function-deprecated">
-			Deprecated
+			<span class="text">Deprecated</span>
 		</div>
 	{% endif %}
 
-	<div class="function-summary">
-		{{ function.summary }}
-	</div>
+	{% if function.summary | length > 0 %}
+		<div class="function-summary">
+			<span class="text">{{ function.summary }}</span>
+		</div>
+	{% endif %}
 
-	<div class="function-description">
-		{{ function.description | markdown | raw }}
-	</div>
+	{% if function.description | length > 0 %}
+		<div class="function-description">
+			<span class="text">{{ function.description | markdown | raw }}</span>
+		</div>
+	{% endif %}
 
 	{% include 'inc/arguments.html.twig' %}
 	{% include 'inc/return.html.twig' %}

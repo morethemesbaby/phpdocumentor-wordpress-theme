@@ -1,13 +1,19 @@
 {% if function.response and function.response.types | join() != 'void' %}
 	<aside class="return">
-		<h3 class="return-title">Return</h3>
+		<h3 class="return-title">
+			<span class="text">Return</span>
+		</h3>
 
-		<div class="return-type">
-			{{ function.response.types |route | join('|') | raw }}
-		</div>
+		{% if function.response.types %}
+			<div class="return-type">
+				<span class="text">{{ function.response.types |route | join('|') | raw }}</span>
+			</div>
+		{% endif %}
 
-		<div class="return-description">
-			{{ function.response.description | markdown | raw }}
-		</div>
+		{% if function.response.description %}
+			<div class="return-description">
+				<span class="text">{{ function.response.description | markdown | raw }}</span>
+			</div>
+		{% endif %}
 	</aside>
 {% endif %}

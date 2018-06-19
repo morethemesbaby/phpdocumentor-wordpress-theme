@@ -1,0 +1,23 @@
+@mixin return {
+	display: flex;
+
+	@include border(normal, all);
+	margin: $lem / 4 0;
+	padding: $lem / 4;
+
+	.return-title {
+		width: 35%;
+
+		.text {
+			font-weight: bold;
+		}
+	}
+
+	.return-type {
+		width:  15%;
+	}
+
+	.return-description {
+		width: 50%;
+	}
+}
