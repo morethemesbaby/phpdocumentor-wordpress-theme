@@ -1,0 +1,13 @@
+{% if docBlock.node.arguments | length > 0 %}
+
+{% set tagsHTML %}
+{% for argument in docBlock.node.arguments %}
+	{% set tag = { klass: 'tag', items: [argument.name, argument.types |route | join('|') | raw, argument.description | markdown | raw] } %}
+	{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
+{% endfor %}
+{% endset %}
+
+{% set tagList = { klass: 'param', title: 'Arguments', tagsHTML: tagsHTML } %}
+{% include 'parts/docblock/tag/docblock-tag-list.html.twig' %}
+
+{% endif %}
