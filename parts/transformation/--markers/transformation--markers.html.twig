@@ -4,15 +4,12 @@
 	{% if file.markers | length > 0 %}
 		{% set counter = counter + file.markers | length %}
 
-		{% set tagListTags %}
-		{% for marker in file.markers %}
-			{% set tag = { klass: 'tag', items: [marker.type, marker.line, marker.message] } %}
-			{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
-		{% endfor %}
+		{% set markersHTML %}
+			{% include 'parts/docblock/tag/--markers/docblock-tag--markers.html.twig' %}
 		{% endset %}
 
 		{% set header = { klass: 'header', items: ['Type', 'Line', 'Description'] } %}
-		{% set tagList = { tags: header, tagsHTML: tagListTags } %}
+		{% set tagList = { tags: header, tagsHTML: markersHTML } %}
 		{% set node = { name: file.path, tagLists: [tagList] } %}
 		{% set docBlock = { klass: "Markers", node: node } %}
 		{% include 'parts/structural-element/file.html.twig' %}

@@ -4,15 +4,12 @@
 	{% if file.allerrors | length > 0 %}
 		{% set counter = counter + file.allerrors | length %}
 
-		{% set tagListTags %}
-		{% for error in file.allerrors %}
-			{% set tag = { klass: 'tag', items: [error.severity, error.line, error.code | trans(error.context)] } %}
-			{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
-		{% endfor %}
+		{% set errorsHTML %}
+			{% include 'parts/docblock/tag/--error/docblock-tag--error.html.twig' %}
 		{% endset %}
 
 		{% set header = { klass: 'header', items: ['Type', 'Line', 'Description'] } %}
-		{% set tagList = { tags: header, tagsHTML: tagListTags } %}
+		{% set tagList = { tags: header, tagsHTML: errorsHTML } %}
 		{% set node = { name: file.path, tagLists: [tagList] } %}
 		{% set docBlock = { klass: "Errors", node: node } %}
 		{% include 'parts/structural-element/file.html.twig' %}

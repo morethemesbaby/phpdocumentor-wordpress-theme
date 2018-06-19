@@ -4,15 +4,12 @@
 	{% if file.allerrors | length > 0 %}
 		{% set counter = counter + element.tags.deprecated.count %}
 
-		{% set tagListTags %}
-		{% for tag in element.tags.deprecated %}
-			{% set tag = { klass: 'tag', items: [element.name, element.line, element.description] } %}
-			{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
-		{% endfor %}
+		{% set deprecatedHTML %}
+			{% include 'parts/docblock/tag/--deprecated/docblock-tag--deprecated.html.twig' %}
 		{% endset %}
 
 		{% set header = { klass: 'header', items: ['Type', 'Line', 'Description'] } %}
-		{% set tagList = { tags: header, tagsHTML: tagListTags } %}
+		{% set tagList = { tags: header, tagsHTML: deprecatedHTML } %}
 		{% set node = { name: file.path, tagLists: [tagList] } %}
 		{% set docBlock = { klass: "Deprecated", node: node } %}
 		{% include 'parts/structural-element/file.html.twig' %}

@@ -1,0 +1,10 @@
+{% set tagsHTML %}
+{% for error in file.allerrors %}
+	{% set items = [error.severity, error.line, error.code | trans(error.context)] %}
+	{% set tag = { klass: 'tag', items: items } %}
+	{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
+{% endfor %}
+{% endset %}
+
+{% set tagList = { klass: 'error', tagsHTML: tagsHTML } %}
+{% include 'parts/docblock/tag/docblock-tag-list.html.twig' %}

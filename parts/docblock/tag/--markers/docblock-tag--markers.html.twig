@@ -1,0 +1,9 @@
+{% set tagsHTML %}
+{% for marker in file.markers %}
+	{% set tag = { klass: 'tag', items: [marker.type, marker.line, marker.message] } %}
+	{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
+{% endfor %}
+{% endset %}
+
+{% set tagList = { klass: 'error', tagsHTML: tagsHTML } %}
+{% include 'parts/docblock/tag/docblock-tag-list.html.twig' %}
