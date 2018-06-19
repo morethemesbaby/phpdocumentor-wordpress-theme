@@ -1,0 +1,13 @@
+<article class="file">
+	{% if f.name | length > 0 %}
+	<h3 class="file-title">
+		<span class="text">{{ f.name }}</span>
+	</h3>
+	{% endif %}
+
+	{% if f.docBlock.tagLists %}
+		{% for tagList in f.docBlock.tagLists %}
+			{% include 'parts/docblock/tag/tag-list.html.twig' %}
+		{% endfor %}
+	{% endif %}
+</article>

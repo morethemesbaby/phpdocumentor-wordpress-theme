@@ -1,0 +1,19 @@
+{% set counter = 0 %}
+
+{% if transformationName == "Errors" %}
+	{% include 'parts/transformation/--errors/transformation--errors.html.twig' %}
+{% endif %}
+
+{% if transformationName == "Deprecated elements" %}
+	{% include 'parts/transformation/--deprecated/transformation--deprecated.html.twig' %}
+{% endif %}
+
+{% if transformationName == "Markers" %}
+	{% include 'parts/transformation/--markers/transformation--markers.html.twig' %}
+{% endif %}
+
+{% if counter == 0 %}
+	<span class="text">
+		There are no {{ transformationName | lower }} :)
+	</span>
+{% endif %}

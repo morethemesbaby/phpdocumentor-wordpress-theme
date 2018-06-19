@@ -1,0 +1,11 @@
+<section class="tag-list">
+	<h3 class="hidden">Tag list</h3>
+
+	{% if tagList.header | length > 0 %}
+		{% include 'parts/docblock/tag/tag-list-header.html.twig' %}
+	{% endif %}
+
+	{% if tagList.tagsHTML | length > 0 %}
+		{{ tagListTags | raw }}
+	{% endif %}
+</section>

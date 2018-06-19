@@ -2,21 +2,12 @@
 {% extends 'parts/layout.html.twig' %}
 
 {% block content %}
-	<section class="content content-errors">
-		<h3 class="content-title">Errors</h3>
+<section class="content content-errors">
+	<h3 class="content-title">Errors</h3>
 
-		<div class="content-body">
-			{% set errorCount = 0 %}
-			{% for file in project.files %}
-				{% if file.allerrors | length > 0 %}
-					{% set errorCount = errorCount + file.allerrors | length %}
-					{% include 'parts/error.html.twig' %}
-				{% endif %}
-			{% endfor %}
-
-			{% if errorCount == 0 %}
-				There are no errors :)
-			{% endif %}
-		</div>
-	</section>
+	<div class="content-body">
+		{% set transformationName = "Errors" %}
+		{% include 'parts/transformation/transformation.html.twig' %}
+	</div>
+</section>
 {% endblock %}

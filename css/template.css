@@ -1831,6 +1831,8 @@ html {
           border: 1px solid;
           margin-bottom: 0.625em;
           padding: 0.625em; }
+    html body .hidden {
+      display: none; }
     html body .menu .ul .li--index a,
     html body .menu .ul .li--index .link {
       color: black;

@@ -1,0 +1,28 @@
+{% for file in project.files %}
+	{% if file.allerrors | length > 0 %}
+		{% set counter = counter + file.allerrors | length %}
+
+		{% set tagListTags %}
+		{% for error in file.allerrors %}
+		<div class="tag">
+			<div class="col-1">
+				<span class="text">{{ error.severity }}</span>
+			</div>
+
+			<div class="col-2">
+				<span class="text">{{ error.line }}</span>
+			</div>
+
+			<div class="col-3">
+				<span class="text">{{ error.code | trans(error.context) }}</span>
+			</div>
+		</div>
+		{% endfor %}
+		{% endset %}
+
+		{% set tagList = { header: ['Type', 'Line', 'Description'], tagsHTML: tagListTags } %}
+		{% set db = { tagLists: [tagList] } %}
+		{% set f = { name: file.path, docBlock: db, file: file } %}
+		{% include 'parts/file/file.html.twig' %}
+	{% endif %}
+{% endfor %}

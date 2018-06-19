@@ -6,47 +6,8 @@
 		<h3 class="content-title">Markers</h3>
 
 		<div class="content-body">
-			{% set markerCount = 0 %}
-			{% for file in project.files %}
-				{% if file.markers | length > 0 %}
-					{% set markerCount = markerCount + file.marker | length %}
-					<article class="article">
-						<h3 class="article-title">
-							<span class="file-name">
-								{{ file.path }}
-							</span>
-							<span class="error-count">
-								{{ file.marker | length }}
-							</span>
-						</h3>
-
-						<article class="article-body">
-							<table class="table">
-								<thead>
-                                	<tr>
-                                		<th>Type</th>
-                                    	<th>Line</th>
-                                    	<th>Description</th>
-                                	</tr>
-                                </thead>
-                                <tbody>
-									{% for marker in file.markers %}
-                                        <tr>
-                                            <td>{{ marker.type }}</td>
-                                            <td>{{ marker.line }}</td>
-                                            <td>{{ marker.message }}</td>
-                                        </tr>
-									{% endfor %}
-                            	</tbody>
-							</table>
-						</article>
-					</article>
-				{% endif %}
-			{% endfor %}
-
-			{% if markerCount == 0 %}
-				There are no markers :)
-			{% endif %}
+			{% set transformationName = "Markers" %}
+			{% include 'parts/transformation/transformation.html.twig' %}
 		</div>
 	</section>
 {% endblock %}

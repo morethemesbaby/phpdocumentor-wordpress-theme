@@ -35,6 +35,10 @@ html {
 		@include sidebar;
 	}
 
+	.hidden {
+		display: none;
+	}
+
 	@include all--menu-active;
   }
 }

@@ -1,0 +1,28 @@
+{% for element in project.indexes.elements if element.deprecated %}
+	{% if file.allerrors | length > 0 %}
+		{% set counter = counter + element.tags.deprecated.count %}
+
+		{% set tagListTags %}
+		{% for tag in element.tags.deprecated %}
+		<div class="tag">
+			<div class="col-1">
+				<span class="text">{{ element.name }}</span>
+			</div>
+
+			<div class="col-2">
+				<span class="text">{{ element.line }}</span>
+			</div>
+
+			<div class="col-3">
+				<span class="text">{{ element.description }}</span>
+			</div>
+		</div>
+		{% endfor %}
+		{% endset %}
+
+		{% set tagList = { header: ['Type', 'Line', 'Description'], tagsHTML: tagListTags } %}
+		{% set db = { tagLists: [tagList] } %}
+		{% set f = { name: file.path, docBlock: db, file: file } %}
+		{% include 'parts/file/file.html.twig' %}
+	{% endif %}
+{% endfor %}
