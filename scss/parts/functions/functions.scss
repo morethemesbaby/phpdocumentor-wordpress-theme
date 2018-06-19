@@ -1,0 +1,26 @@
+@mixin functions {
+	display: flex;
+
+	@include border(normal, all);
+	border-top: 0;
+
+	.functions-title {
+		@include padding(half, half, half, half);
+		@include border(normal, right);
+
+		writing-mode: sideways-lr;
+		text-align: center;
+	}
+
+	.functions-body {
+		@include padding;
+
+		.function {
+			@include function;
+
+			+ .function {
+				@include margin(yes, no, no, no);
+			}
+		}
+	}
+}

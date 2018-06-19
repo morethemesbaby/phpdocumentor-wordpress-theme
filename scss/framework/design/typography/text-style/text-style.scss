@@ -60,6 +60,11 @@
     @include scale(large-3);
   }
 
+  // Function title
+  // - Large text
+  @if ($variant == 'function-title') {
+    @include scale(large-2);
+  }
 
   // Headline with large spacing
   // - Large text with extra large spacing

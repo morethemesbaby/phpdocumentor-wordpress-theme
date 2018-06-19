@@ -1,0 +1,7 @@
+@mixin function {
+	.function-title {
+		.text {
+			@include text-style(function-title);
+		}
+	}
+}
