@@ -1,6 +1,6 @@
-<aside class="nodes">
-	<h3 class="nodes-title">
-		{{ nodeType }}
+<nav class="file-list">
+	<h3 class="file-list-title">
+		<span class="text">{{ fileType}}</span>
 	</h3>
 
 	<ul class="ul js-sort-list">
@@ -8,14 +8,14 @@
 			{% set displayFile = false %}
 			{% set fileName = file.path %}
 
-			{% if  nodeType == "Templates" %}
+			{% if  fileType == "Templates" %}
 				{% set test = file.path | split('/') %}
 				{% if test[1] is empty %}
 					{% set displayFile = true %}
 				{% endif %}
 			{% endif %}
 
-			{% if  nodeType == "Template Parts" %}
+			{% if  fileType == "Template Parts" %}
 				{% set test = file.path | split('/') %}
 				{% if test[0] == 'template-parts' %}
 					{% set displayFile = true %}
@@ -23,7 +23,7 @@
 				{% endif %}
 			{% endif %}
 
-			{% if  nodeType == "Template Tags" %}
+			{% if  fileType == "Template Tags" %}
 				{% set test = file.path | split('/') %}
 				{% if test[0] == 'inc' %}
 					{% set displayFile = true %}
@@ -40,4 +40,4 @@
 			{% endif %}
 		{% endfor %}
 	</ul>
-</aside>
+</nav>

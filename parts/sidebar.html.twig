@@ -1,14 +1,14 @@
-<nav class="sidebar">
-	<h3 class="sidebar-title">Sidebar</h3>
+<section class="sidebar">
+	<h3 class="hidden">Sidebar</h3>
 
 	<div class="sidebar-content">
-		{% set nodeType = "Templates" %}
-		{% include 'inc/nodes.html.twig' %}
+		{% set fileType = "Templates" %}
+		{% include 'parts/file/file-list.html.twig' %}
 
-		{% set nodeType = "Template Parts" %}
-		{% include 'inc/nodes.html.twig' %}
+		{% set fileType = "Template Parts" %}
+		{% include 'parts/file/file-list.html.twig' %}
 
-		{% set nodeType = "Template Tags" %}
-		{% include 'inc/nodes.html.twig' %}
+		{% set fileType = "Template Tags" %}
+		{% include 'parts/file/file-list.html.twig' %}
 	</div>
-</nav>
+</section>
