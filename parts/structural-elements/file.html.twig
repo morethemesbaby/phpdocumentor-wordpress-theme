@@ -2,7 +2,11 @@
 	{% include 'parts/docblock/docblock-name.html.twig' %}
 	{% include 'parts/docblock/docblock-path.html.twig' %}
 	{% include 'parts/docblock/docblock-summary-and-description.html.twig' %}
+
+	{# external tag lists coming for example from the errors transformation #}
 	{% include 'parts/docblock/tag/docblock-tag-lists.html.twig' %}
 
-	{% include 'parts/structural-elements/functions.html.twig' %}
+	{# here we will have to add file tags like @link, @package, @since ... #}
+
+	{% include 'parts/structural-elements/function-list.html.twig' %}
 </article>
