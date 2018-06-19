@@ -10,7 +10,7 @@
 
 		{% for function in oldDocBlock.node.functions %}
 			{% set docBlock = { klass: "function", node: function } %}
-			{% include 'parts/structural-elements/function.html.twig' %}
+			{% include 'parts/structural-element/function.html.twig' %}
 		{% endfor %}
 
 		{% set docBlock = oldDocBlock %}

@@ -15,7 +15,7 @@
 		{% set tagList = { tags: header, tagsHTML: tagListTags } %}
 		{% set node = { name: file.path, tagLists: [tagList] } %}
 		{% set docBlock = { klass: "Markers", node: node } %}
-		{% include 'parts/structural-elements/file.html.twig' %}
+		{% include 'parts/structural-element/file.html.twig' %}
 	{% endif %}
 {% endfor %}
 
