@@ -1,28 +1,26 @@
+{% set counter = 0 %}
+
 {% for file in project.files %}
 	{% if file.markers | length > 0 %}
 		{% set counter = counter + file.markers | length %}
 
 		{% set tagListTags %}
 		{% for marker in file.markers %}
-		<div class="tag">
-			<div class="col-1">
-				<span class="text">{{ marker.type }}</span>
-			</div>
-
-			<div class="col-2">
-				<span class="text">{{ marker.line }}</span>
-			</div>
-
-			<div class="col-3">
-				<span class="text">{{ marker.message }}</span>
-			</div>
-		</div>
+			{% set tag = { klass: 'tag', items: [marker.type, marker.line, marker.message] } %}
+			{% include 'parts/docblock/docblock-tag.html.twig' %}
 		{% endfor %}
 		{% endset %}
 
-		{% set tagList = { header: ['Type', 'Line', 'Description'], tagsHTML: tagListTags } %}
-		{% set db = { tagLists: [tagList] } %}
-		{% set f = { name: file.path, docBlock: db, file: file } %}
-		{% include 'parts/file/file.html.twig' %}
+		{% set header = { klass: 'header', items: ['Type', 'Line', 'Description'] } %}
+		{% set tagList = { tags: header, tagsHTML: tagListTags } %}
+		{% set node = { name: file.path, tagLists: [tagList] } %}
+		{% set docBlock = { klass: "Markers", node: node } %}
+		{% include 'parts/structural-elements/file.html.twig' %}
 	{% endif %}
 {% endfor %}
+
+{% if counter == 0 %}
+	<span class="text">
+		There are no {{ transformationName | lower }} :)
+	</span>
+{% endif %}

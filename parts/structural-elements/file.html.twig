@@ -1,7 +1,8 @@
-<section class="file">
-	{% set docBlock = { klass: "file", node: node } %}
-
+<article class="file">
 	{% include 'parts/docblock/docblock-name.html.twig' %}
 	{% include 'parts/docblock/docblock-path.html.twig' %}
 	{% include 'parts/docblock/docblock-summary-and-description.html.twig' %}
-</section>
+	{% include 'parts/docblock/docblock-tag-lists.html.twig' %}
+
+	{% include 'parts/structural-elements/functions.html.twig' %}
+</article>

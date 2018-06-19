@@ -1,0 +1,9 @@
+{% if docBlock.node.deprecated | length > 0%}
+
+<div class="{{ docBlock.klass }}-deprecated">
+	<span class="text">
+		Deprecated
+	</span>
+</div>
+
+{% endif %}

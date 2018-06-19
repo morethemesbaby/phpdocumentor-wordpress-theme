@@ -1,0 +1,10 @@
+<article class="function">
+	{% include 'parts/docblock/docblock-name.html.twig' %}
+	{% include 'parts/docblock/docblock-deprecated.html.twig' %}
+	{% include 'parts/docblock/docblock-summary.html.twig' %}
+	{% include 'parts/docblock/docblock-description.html.twig' %}
+
+	{% if docBlock.node.arguments | length > 0 %}
+	{% set tagList = { title: "Arguments", } %}
+	{% endif %}
+</article>

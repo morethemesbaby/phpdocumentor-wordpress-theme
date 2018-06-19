@@ -1,0 +1,21 @@
+{% if docBlock.node.functions | length > 0 %}
+
+<section class="functions">
+	<h3 class="functions-title">
+		<span class="text">Functions</span>
+	</h3>
+
+	<div class="functions-body">
+		{% set oldDocBlock = docBlock %}
+
+		{% for function in oldDocBlock.node.functions %}
+			{% set docBlock = { klass: "function", node: function } %}
+			{% include 'parts/structural-elements/function.html.twig' %}
+		{% endfor %}
+
+		{% set docBlock = oldDocBlock %}
+	</div>
+</section>
+
+
+{% endif %}

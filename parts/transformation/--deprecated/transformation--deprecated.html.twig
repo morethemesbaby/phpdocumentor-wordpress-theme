@@ -1,28 +1,26 @@
+{% set counter = 0 %}
+
 {% for element in project.indexes.elements if element.deprecated %}
 	{% if file.allerrors | length > 0 %}
 		{% set counter = counter + element.tags.deprecated.count %}
 
 		{% set tagListTags %}
 		{% for tag in element.tags.deprecated %}
-		<div class="tag">
-			<div class="col-1">
-				<span class="text">{{ element.name }}</span>
-			</div>
-
-			<div class="col-2">
-				<span class="text">{{ element.line }}</span>
-			</div>
-
-			<div class="col-3">
-				<span class="text">{{ element.description }}</span>
-			</div>
-		</div>
+			{% set tag = { klass: 'tag', items: [element.name, element.line, element.description] } %}
+			{% include 'parts/docblock/docblock-tag.html.twig' %}
 		{% endfor %}
 		{% endset %}
 
-		{% set tagList = { header: ['Type', 'Line', 'Description'], tagsHTML: tagListTags } %}
-		{% set db = { tagLists: [tagList] } %}
-		{% set f = { name: file.path, docBlock: db, file: file } %}
-		{% include 'parts/file/file.html.twig' %}
+		{% set header = { klass: 'header', items: ['Type', 'Line', 'Description'] } %}
+		{% set tagList = { tags: header, tagsHTML: tagListTags } %}
+		{% set node = { name: file.path, tagLists: [tagList] } %}
+		{% set docBlock = { klass: "Deprecated", node: node } %}
+		{% include 'parts/structural-elements/file.html.twig' %}
 	{% endif %}
 {% endfor %}
+
+{% if counter == 0 %}
+	<span class="text">
+		There are no {{ transformationName | lower }} :)
+	</span>
+{% endif %}

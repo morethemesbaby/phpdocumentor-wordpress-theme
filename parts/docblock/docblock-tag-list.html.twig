@@ -1,0 +1,24 @@
+{% if tagList | length > 0 %}
+
+<aside class="{{ tagList.klass }}-tag-list">
+	{% if tagList.title | length > 0 %}
+	<h3 class="tag-list-title">
+		<span class="text">
+			{{ tagList.title }}
+		</span>
+	</h3>
+	{% else %}
+		<h3 class="hidden">Tag list</h3>
+	{% endif %}
+
+	{% if tagList.tags | length > 0 %}
+		{% set tag = tagList.tags %}
+		{% include 'parts/docblock/docblock-tag.html.twig' %}
+	{% endif %}
+
+	{% if tagList.tagsHTML | length > 0 %}
+		{{ tagList.tagsHTML | raw }}
+	{% endif %}
+</aside>
+
+{% endif %}

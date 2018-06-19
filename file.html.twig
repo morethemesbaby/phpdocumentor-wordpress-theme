@@ -5,7 +5,9 @@
 	<section class="content content-file">
 		<h3 class="content-title">Content</h3>
 
-		{%include 'parts/structural-elements/file.html.twig' %}
+		{% set docBlock = { klass: "file", node: node } %}
+		{% include 'parts/structural-elements/file.html.twig' %}
+		
 		{% include 'parts/sidebar.html.twig' %}
 	</section>
 {% endblock %}
