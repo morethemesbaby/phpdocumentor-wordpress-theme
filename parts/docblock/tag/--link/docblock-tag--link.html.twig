@@ -10,11 +10,11 @@
 
 		{% set itemDescription = (tag.description != itemLink) ? tag.description : '' %}
 
-		{% set tag = { klass: 'tag', items: ['@link:', itemLinkHTML, itemDescription] } %}
+		{% set tag = { klass: 'link', items: ['@link', itemLinkHTML, itemDescription] } %}
 		{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
 	{% endfor %}
 	{% endset %}
 
-	{% set tagList = { klass: 'param', tagsHTML: tagsHTML } %}
+	{% set tagList = { klass: 'link', tagsHTML: tagsHTML } %}
 	{% include 'parts/docblock/tag/docblock-tag-list.html.twig' %}
 {% endfor %}

@@ -1,0 +1,14 @@
+@mixin tag-list {
+	display: flex;
+	flex-direction: column;
+
+	.tag-list-title {
+		.text {
+			font-weight: bold;
+		}
+	}
+
+	.tag {
+		@include tag;
+	}
+}

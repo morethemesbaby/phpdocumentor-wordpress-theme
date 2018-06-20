@@ -9,14 +9,20 @@
 		.text {
 			@include text-style(large);
 		}
+
+		+ .function-description {
+			@include margin(half, no, no, no);
+		}
 	}
 
-	.arguments {
+	.function-description {
+		.text {
+			@include text-style(body-text-post);
+		}
+	}
+
+	.tag-list {
+		@include tag-list;
 		@include margin(half, no, no, no);
-		@include arguments;
-	}
-
-	.return {
-		@include return;
 	}
 }

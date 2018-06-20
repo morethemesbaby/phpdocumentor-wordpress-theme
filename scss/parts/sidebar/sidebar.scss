@@ -14,8 +14,8 @@
 			@include flexbox-grid(3, $lem, $lem, $grid-title: false);
 		}
 
-		.nodes {
-			.nodes-title {
+		.file-list {
+			.file-list-title {
 				@include margin(no, no, half, no);
 				@include text-style(large);
 			}

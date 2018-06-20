@@ -1,8 +1,8 @@
-@mixin node {
+@mixin file {
 	display: flex;
 	flex-direction: column;
 
-	.node-subtitle {
+	.file-path {
 		order: -1;
 		display: inline-flex;
 
@@ -12,7 +12,7 @@
 		}
 	}
 
-	.node-title {
+	.file-title {
 		@include border(normal, all);
 		@include padding(half, half, half, half);
 
@@ -21,7 +21,7 @@
 		}
 	}
 
-	.node-summary-and-description {
+	.file-summary-and-description {
 		@include border(normal, all);
 		@include padding(half, half, half, half);
 
@@ -29,20 +29,33 @@
 		display: flex;
 		flex-direction: column;
 
-		.node-summary {
+		.file-summary {
 			.text {
 				@include text-style(large);
 			}
 
-			+ .node-description {
+			+ .file-description {
 				@include margin(half, no, no, no);
 			}
 		}
 
-		.node-description {
+		.file-description {
 			.text {
 				@include text-style(body-text-post);
 			}
+		}
+	}
+
+	.file-tags {
+		@include border(normal, all);
+		@include padding(half, half, half, half);
+
+		border-top: none;
+		display: flex;
+		flex-direction: column;
+
+		.tag-list {
+			@include tag-list;
 		}
 	}
 

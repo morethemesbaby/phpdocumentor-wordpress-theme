@@ -11,7 +11,7 @@
 		{% set header = { klass: 'header', items: ['Type', 'Line', 'Description'] } %}
 		{% set tagList = { tags: header, tagsHTML: deprecatedHTML } %}
 		{% set node = { name: file.path, tagLists: [tagList] } %}
-		{% set docBlock = { klass: "Deprecated", node: node } %}
+		{% set docBlock = { klass: "file", node: node } %}
 		{% include 'parts/structural-element/file.html.twig' %}
 	{% endif %}
 {% endfor %}

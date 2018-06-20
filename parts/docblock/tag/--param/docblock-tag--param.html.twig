@@ -2,7 +2,7 @@
 
 {% set tagsHTML %}
 {% for argument in docBlock.node.arguments %}
-	{% set tag = { klass: 'tag', items: [argument.name, argument.types |route | join('|') | raw, argument.description | markdown | raw] } %}
+	{% set tag = { klass: 'param', items: [argument.name, argument.types |route | join('|') | raw, argument.description | markdown | raw] } %}
 	{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
 {% endfor %}
 {% endset %}

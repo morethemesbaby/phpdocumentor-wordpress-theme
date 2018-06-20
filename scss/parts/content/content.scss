@@ -5,10 +5,11 @@
 		display: none;
 	}
 
-	.node {
-		@include node;
+	.file {
+		@include file;
 
-		+ .sidebar {
+		+ .sidebar,
+		+ .file {
 			@include margin(yes, no, no, no);
 		}
 	}

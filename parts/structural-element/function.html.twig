@@ -4,9 +4,11 @@
 	{% include 'parts/docblock/docblock-summary.html.twig' %}
 	{% include 'parts/docblock/docblock-description.html.twig' %}
 
-	{% include 'parts/docblock/tag/--param/docblock-tag--param.html.twig' %}
-	{% include 'parts/docblock/tag/--return/docblock-tag--return.html.twig' %}
-	{% include 'parts/docblock/tag/--link/docblock-tag--link.html.twig'  %}
-	{% include 'parts/docblock/tag/--package/docblock-tag--package.html.twig'  %}
-	{% include 'parts/docblock/tag/--since/docblock-tag--since.html.twig'  %}
+	<div class="tag-list">
+		{% include 'parts/docblock/tag/--param/docblock-tag--param.html.twig' %}
+		{% include 'parts/docblock/tag/--return/docblock-tag--return.html.twig' %}
+		{% include 'parts/docblock/tag/--link/docblock-tag--link.html.twig'  %}
+		{% include 'parts/docblock/tag/--package/docblock-tag--package.html.twig'  %}
+		{% include 'parts/docblock/tag/--since/docblock-tag--since.html.twig'  %}
+	</div>
 </article>

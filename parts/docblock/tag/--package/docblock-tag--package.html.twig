@@ -1,7 +1,12 @@
 {% if docBlock.node.package is not empty and docBlock.node.package != '\\' %}
 
-{% set package = docBlock.node.subpackage ? (docBlock.node.package ~ '\\' ~ docBlock.node.subpackage) : docBlock.node.package %}
-{% set tag = { klass: 'tag', items: ['@package:', package] } %}
-{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
+	{% set tagsHTML %}
+	{% set package = docBlock.node.subpackage ? (docBlock.node.package ~ '\\' ~ docBlock.node.subpackage) : docBlock.node.package %}
+	{% set tag = { klass: 'package', items: ['@package', package] } %}
+	{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
+	{% endset %}
+
+	{% set tagList = { klass: 'package', tagsHTML: tagsHTML } %}
+	{% include 'parts/docblock/tag/docblock-tag-list.html.twig' %}
 
 {% endif %}

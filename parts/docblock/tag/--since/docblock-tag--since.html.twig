@@ -1,7 +1,7 @@
 {% for tagName,tags in node.tags if tagName in ['since'] %}
 	{% set tagsHTML %}
 	{% for tag in tags %}
-		{% set tag = { klass: 'tag', items: ['@since', tag.version, tag.description | markdown| raw] } %}
+		{% set tag = { klass: 'since', items: ['@since', tag.version, tag.description | markdown| raw] } %}
 		{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
 	{% endfor %}
 	{% endset %}

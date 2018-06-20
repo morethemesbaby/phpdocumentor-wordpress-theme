@@ -1,9 +1,9 @@
 {% set tagsHTML %}
 {% for tag in element.tags.deprecated %}
-	{% set tag = { klass: 'tag', items: [element.name, element.line, element.description] } %}
+	{% set tag = { klass: 'deprecated', items: [element.name, element.line, element.description] } %}
 	{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
 {% endfor %}
 {% endset %}
 
-{% set tagList = { klass: 'error', tagsHTML: tagsHTML } %}
+{% set tagList = { klass: 'deprecated', tagsHTML: tagsHTML } %}
 {% include 'parts/docblock/tag/docblock-tag-list.html.twig' %}

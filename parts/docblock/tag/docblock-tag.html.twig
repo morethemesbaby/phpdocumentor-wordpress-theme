@@ -1,5 +1,5 @@
 {% if tag | length > 0 %}
-	<div class="{{ tag.klass }}">
+	<div class="tag tag--{{ tag.klass }}">
 		{% for item in tag.items %}
 		<div class="col-{{ loop.index }}">
 			<span class="text">
