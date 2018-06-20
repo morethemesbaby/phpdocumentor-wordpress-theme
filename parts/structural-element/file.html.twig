@@ -4,12 +4,14 @@
 	{% include 'parts/docblock/docblock-summary-and-description.html.twig' %}
 
 	<div class="file-tags">
-		{# external tag lists coming for example from the errors transformation #}
-		{% include 'parts/docblock/tag/docblock-tag-lists.html.twig' %}
+		{% if docBlock.node.tagsHTML | length > 0 %}
+			{{ docBlock.node.tagsHTML}}
+		{% endif %}
 
-		{% include 'parts/docblock/tag/--link/docblock-tag--link.html.twig'  %}
-		{% include 'parts/docblock/tag/--package/docblock-tag--package.html.twig'  %}
-		{% include 'parts/docblock/tag/--since/docblock-tag--since.html.twig'  %}
+		{% set tagLists = ['link', 'package', 'since'] %}
+		{% for tagList in tagLists %}
+			{% include "parts/docblock/tag/--#{tagList}/docblock-tag--#{tagList}.html.twig" %}
+		{% endfor %}
 	</div>
 
 	{% include 'parts/structural-element/function-list.html.twig' %}

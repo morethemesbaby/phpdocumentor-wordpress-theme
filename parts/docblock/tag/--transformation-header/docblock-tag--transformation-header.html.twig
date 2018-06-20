@@ -1,0 +1,7 @@
+{% set tagsHTML %}
+{% set tag = { klass: 'header', items: ['Type', 'Line', 'Description'] } %}
+{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
+{% endset %}
+
+{% set tagList = { klass: 'header', tagsHTML: tagsHTML } %}
+{% include 'parts/docblock/tag/docblock-tag-list.html.twig' %}

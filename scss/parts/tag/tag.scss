@@ -14,8 +14,24 @@
 	}
 
 
+	&--header {
+		font-weight: bold;
+	}
+
+	&--error,
+	&--marker,
+	&--deprecated,
+	&--header {
+		@include padding(no, no, half, no);
+	}
+
+
 	&--param,
-	&--return {
+	&--return,
+	&--header,
+	&--error,
+	&--marker,
+	&--deprecated {
 		.col-1 {
 			width: 20%;
 		}

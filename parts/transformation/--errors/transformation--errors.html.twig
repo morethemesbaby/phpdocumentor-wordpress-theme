@@ -4,13 +4,12 @@
 	{% if file.allerrors | length > 0 %}
 		{% set counter = counter + file.allerrors | length %}
 
-		{% set errorsHTML %}
-			{% include 'parts/docblock/tag/--error/docblock-tag--error.html.twig' %}
+		{% set tagsHTML %}
+		{% include 'parts/docblock/tag/--transformation-header/docblock-tag--transformation-header.html.twig' %}
+		{% include 'parts/docblock/tag/--error/docblock-tag--error.html.twig' %}
 		{% endset %}
 
-		{% set header = { klass: 'header', items: ['Type', 'Line', 'Description'] } %}
-		{% set tagList = { tags: header, tagsHTML: errorsHTML } %}
-		{% set node = { name: file.path, tagLists: [tagList] } %}
+		{% set node = { name: file.path, tagsHTML: tagsHTML } %}
 		{% set docBlock = { klass: "file", node: node } %}
 		{% include 'parts/structural-element/file.html.twig' %}
 	{% endif %}

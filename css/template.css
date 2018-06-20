@@ -1629,11 +1629,19 @@ html {
               width: 60%; }
             html body .content .file .file-tags .tag-list .tag .col-3 {
               width: 20%; }
-            html body .content .file .file-tags .tag-list .tag--param .col-1, html body .content .file .file-tags .tag-list .tag--return .col-1 {
+            html body .content .file .file-tags .tag-list .tag--header {
+              font-weight: bold; }
+            @media only screen and (max-width: 767.9px) {
+              html body .content .file .file-tags .tag-list .tag--error, html body .content .file .file-tags .tag-list .tag--marker, html body .content .file .file-tags .tag-list .tag--deprecated, html body .content .file .file-tags .tag-list .tag--header {
+                padding-bottom: 1.25em; } }
+            @media only screen and (min-width: 768px) {
+              html body .content .file .file-tags .tag-list .tag--error, html body .content .file .file-tags .tag-list .tag--marker, html body .content .file .file-tags .tag-list .tag--deprecated, html body .content .file .file-tags .tag-list .tag--header {
+                padding-bottom: 1.25em; } }
+            html body .content .file .file-tags .tag-list .tag--param .col-1, html body .content .file .file-tags .tag-list .tag--return .col-1, html body .content .file .file-tags .tag-list .tag--header .col-1, html body .content .file .file-tags .tag-list .tag--error .col-1, html body .content .file .file-tags .tag-list .tag--marker .col-1, html body .content .file .file-tags .tag-list .tag--deprecated .col-1 {
               width: 20%; }
-            html body .content .file .file-tags .tag-list .tag--param .col-2, html body .content .file .file-tags .tag-list .tag--return .col-2 {
+            html body .content .file .file-tags .tag-list .tag--param .col-2, html body .content .file .file-tags .tag-list .tag--return .col-2, html body .content .file .file-tags .tag-list .tag--header .col-2, html body .content .file .file-tags .tag-list .tag--error .col-2, html body .content .file .file-tags .tag-list .tag--marker .col-2, html body .content .file .file-tags .tag-list .tag--deprecated .col-2 {
               width: 10%; }
-            html body .content .file .file-tags .tag-list .tag--param .col-3, html body .content .file .file-tags .tag-list .tag--return .col-3 {
+            html body .content .file .file-tags .tag-list .tag--param .col-3, html body .content .file .file-tags .tag-list .tag--return .col-3, html body .content .file .file-tags .tag-list .tag--header .col-3, html body .content .file .file-tags .tag-list .tag--error .col-3, html body .content .file .file-tags .tag-list .tag--marker .col-3, html body .content .file .file-tags .tag-list .tag--deprecated .col-3 {
               width: 70%; }
       html body .content .file .functions {
         display: -webkit-box;
@@ -2520,11 +2528,19 @@ html {
               width: 60%; }
             html body .content .file .functions .functions-body .function .tag-list .tag .col-3 {
               width: 20%; }
-            html body .content .file .functions .functions-body .function .tag-list .tag--param .col-1, html body .content .file .functions .functions-body .function .tag-list .tag--return .col-1 {
+            html body .content .file .functions .functions-body .function .tag-list .tag--header {
+              font-weight: bold; }
+            @media only screen and (max-width: 767.9px) {
+              html body .content .file .functions .functions-body .function .tag-list .tag--error, html body .content .file .functions .functions-body .function .tag-list .tag--marker, html body .content .file .functions .functions-body .function .tag-list .tag--deprecated, html body .content .file .functions .functions-body .function .tag-list .tag--header {
+                padding-bottom: 1.25em; } }
+            @media only screen and (min-width: 768px) {
+              html body .content .file .functions .functions-body .function .tag-list .tag--error, html body .content .file .functions .functions-body .function .tag-list .tag--marker, html body .content .file .functions .functions-body .function .tag-list .tag--deprecated, html body .content .file .functions .functions-body .function .tag-list .tag--header {
+                padding-bottom: 1.25em; } }
+            html body .content .file .functions .functions-body .function .tag-list .tag--param .col-1, html body .content .file .functions .functions-body .function .tag-list .tag--return .col-1, html body .content .file .functions .functions-body .function .tag-list .tag--header .col-1, html body .content .file .functions .functions-body .function .tag-list .tag--error .col-1, html body .content .file .functions .functions-body .function .tag-list .tag--marker .col-1, html body .content .file .functions .functions-body .function .tag-list .tag--deprecated .col-1 {
               width: 20%; }
-            html body .content .file .functions .functions-body .function .tag-list .tag--param .col-2, html body .content .file .functions .functions-body .function .tag-list .tag--return .col-2 {
+            html body .content .file .functions .functions-body .function .tag-list .tag--param .col-2, html body .content .file .functions .functions-body .function .tag-list .tag--return .col-2, html body .content .file .functions .functions-body .function .tag-list .tag--header .col-2, html body .content .file .functions .functions-body .function .tag-list .tag--error .col-2, html body .content .file .functions .functions-body .function .tag-list .tag--marker .col-2, html body .content .file .functions .functions-body .function .tag-list .tag--deprecated .col-2 {
               width: 10%; }
-            html body .content .file .functions .functions-body .function .tag-list .tag--param .col-3, html body .content .file .functions .functions-body .function .tag-list .tag--return .col-3 {
+            html body .content .file .functions .functions-body .function .tag-list .tag--param .col-3, html body .content .file .functions .functions-body .function .tag-list .tag--return .col-3, html body .content .file .functions .functions-body .function .tag-list .tag--header .col-3, html body .content .file .functions .functions-body .function .tag-list .tag--error .col-3, html body .content .file .functions .functions-body .function .tag-list .tag--marker .col-3, html body .content .file .functions .functions-body .function .tag-list .tag--deprecated .col-3 {
               width: 70%; }
           @media only screen and (max-width: 767.9px) {
             html body .content .file .functions .functions-body .function .tag-list {
@@ -2581,28 +2597,36 @@ html {
           html body .content .file .functions .functions-body .function + .function {
             padding-top: 2.5em; } }
       @media only screen and (max-width: 767.9px) {
-        html body .content .file + .sidebar {
+        html body .content .file + .sidebar,
+        html body .content .file + .file {
           margin-top: 2.5em; } }
       @media only screen and (min-width: 768px) {
-        html body .content .file + .sidebar {
+        html body .content .file + .sidebar,
+        html body .content .file + .file {
           margin-top: 2.5em; } }
       @media only screen and (max-width: 767.9px) {
-        html body .content .file + .sidebar {
+        html body .content .file + .sidebar,
+        html body .content .file + .file {
           margin-bottom: 0; } }
       @media only screen and (min-width: 768px) {
-        html body .content .file + .sidebar {
+        html body .content .file + .sidebar,
+        html body .content .file + .file {
           margin-bottom: 0; } }
       @media only screen and (max-width: 767.9px) {
-        html body .content .file + .sidebar {
+        html body .content .file + .sidebar,
+        html body .content .file + .file {
           margin-left: 0; } }
       @media only screen and (min-width: 768px) {
-        html body .content .file + .sidebar {
+        html body .content .file + .sidebar,
+        html body .content .file + .file {
           margin-left: 0; } }
       @media only screen and (max-width: 767.9px) {
-        html body .content .file + .sidebar {
+        html body .content .file + .sidebar,
+        html body .content .file + .file {
           margin-right: 0; } }
       @media only screen and (min-width: 768px) {
-        html body .content .file + .sidebar {
+        html body .content .file + .sidebar,
+        html body .content .file + .file {
           margin-right: 0; } }
     html body .sidebar .sidebar-title {
       display: none; }
