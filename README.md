@@ -12,7 +12,15 @@ A documentation organized in the same way as theme files in the editor would off
 ## How it works ?
 
 All `PHP` files of the theme are collected into three sections: Templates, Template parts, and Template tags.
-When clicking on a file the DocBlock associated to the file is displayed, and in plus all other DocBlocks for all Structural Elements inside of the file (Functions, Constants, Classes etc) 
+When clicking on a file the DocBlock associated to the file is displayed, and in plus all other DocBlocks for all Structural Elements inside of the file (Functions, Constants, Classes etc)
+
+### List of DocBlock items supported
+
+https://github.com/morethemesbaby/phpdocumentor-wordpress-theme/tree/master/parts/docblock
+
+### List of Structural Elements supported
+
+https://github.com/morethemesbaby/phpdocumentor-wordpress-theme/tree/master/parts/structural-element
 
 ## Running
 
