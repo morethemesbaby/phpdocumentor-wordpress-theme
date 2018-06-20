@@ -21,6 +21,11 @@
 		}
 	}
 
+	.file-summary,
+	.file-description {
+		max-width: $text-block-width;
+	}
+
 	.file-summary-and-description {
 		@include border(normal, all);
 		@include padding(half, half, half, half);

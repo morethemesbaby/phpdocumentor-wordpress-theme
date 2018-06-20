@@ -2,7 +2,7 @@
 
 <div class="{{ docBlock.klass }}-description">
 	<span class="text">
-		{{ docBlock.node.description }}
+		{{ docBlock.node.description | markdown | raw }}
 	</span>
 </div>
 

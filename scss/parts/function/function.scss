@@ -5,7 +5,14 @@
 		}
 	}
 
+	.function-summary,
+	.function-description {
+		max-width: $text-block-width;
+	}
+
 	.function-summary {
+		@include margin(half, no, no, no);
+
 		.text {
 			@include text-style(large);
 		}

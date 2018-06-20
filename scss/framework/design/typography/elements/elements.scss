@@ -28,6 +28,6 @@
   @include iframe;
 
   > * + * {
-    @include margin(yes, no, no, no);
+    @include margin(half, no, no, no);
   }
 }
