@@ -2,15 +2,15 @@
 
 	{% set tagsHTML %}
 	{% for tag in tags %}
-		{% set itemLink %}
-		<a class="link" href="{{ tag.reference | route('url') ?: tag.link }}">
-			{{ tag.reference | route('url') ?: tag.link }}
-		</a>
+		{% set itemLink = tag.reference | route('url') ?: tag.link %}
+
+		{% set itemLinkHTML %}
+		<a class="link" href="{{ itemLink }}">{{ itemLink }}</a>
 		{% endset %}
 
-		{% set itemDescription = tag.description ?: tag.reference %}
+		{% set itemDescription = (tag.description != itemLink) ? tag.description : '' %}
 
-		{% set tag = { klass: 'tag', items: ['@link:', itemLink, itemDescription] } %}
+		{% set tag = { klass: 'tag', items: ['@link:', itemLinkHTML, itemDescription] } %}
 		{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
 	{% endfor %}
 	{% endset %}

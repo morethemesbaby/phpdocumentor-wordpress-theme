@@ -1,0 +1,8 @@
+{% if docBlock.node.response and docBlock.node.response.types | join() != 'void' %}
+
+	{% set returnType = docBlock.node.response.types ? docBlock.node.response.types | route | join('|') | raw %}
+	{% set returnDescription = docBlock.node.response.description ? docBlock.node.response.description | markdown | raw %}
+
+	{% set tag = { klass: 'tag', items: ['@return:', returnType, returnDescription] } %}
+	{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
+{% endif %}
