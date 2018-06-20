@@ -1,0 +1,7 @@
+{% if docBlock.node.package is not empty and docBlock.node.package != '\\' %}
+
+{% set package = docBlock.node.subpackage ? (docBlock.node.package ~ '\\' ~ docBlock.node.subpackage) : docBlock.node.package %}
+{% set tag = { klass: 'tag', items: ['@package:', package] } %}
+{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
+
+{% endif %}

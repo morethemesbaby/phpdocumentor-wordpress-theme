@@ -1,0 +1,20 @@
+{% for tagName,tags in node.tags if tagName in ['link', 'see'] %}
+
+	{% set tagsHTML %}
+	{% for tag in tags %}
+		{% set itemLink %}
+		<a class="link" href="{{ tag.reference | route('url') ?: tag.link }}">
+			{{ tag.reference | route('url') ?: tag.link }}
+		</a>
+		{% endset %}
+
+		{% set itemDescription = tag.description ?: tag.reference %}
+
+		{% set tag = { klass: 'tag', items: ['@link:', itemLink, itemDescription] } %}
+		{% include 'parts/docblock/tag/docblock-tag.html.twig' %}
+	{% endfor %}
+	{% endset %}
+
+	{% set tagList = { klass: 'param', tagsHTML: tagsHTML } %}
+	{% include 'parts/docblock/tag/docblock-tag-list.html.twig' %}
+{% endfor %}
